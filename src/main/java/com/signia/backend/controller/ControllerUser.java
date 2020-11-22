@@ -60,7 +60,13 @@ public class ControllerUser {
 
     @PostMapping("/opt")
     public ResponseEntity<Object> optParam(@RequestBody final Opt opt) {
-
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        Optional<Opt> findOpt = optService.getOpt(opt.getCode());
+        if (findOpt.isEmpty()) {
+            return new ResponseEntity<>("Error", HttpStatus.OK);
+        } else if (checkDataService.checkDate(findOpt.get().getDateCreateOpt())) {
+            return new ResponseEntity<>("Susses", HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>("Unknown error occured", HttpStatus.OK);
+        }
     }
 }

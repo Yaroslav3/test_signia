@@ -22,7 +22,6 @@ public class AuthorizationServiceImpl implements AuthorizationService {
 
     @Override
     public Optional<Authorization> getUserAuth(Authorization user) {
-        logger.info("test", user.toString());
         return authorizationRepository.findAuthorizationUser(user.getEmail(), user.getPassword());
     }
 }

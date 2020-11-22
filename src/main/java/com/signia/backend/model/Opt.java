@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.ZonedDateTime;
 import java.util.Date;
 
 @Entity
@@ -23,7 +25,7 @@ public class Opt {
     private String code;
 
     @Column(name = "dateCreateOpt")
-    private Date dateCreateOpt;
+    private ZonedDateTime dateCreateOpt;
 
     @Column(name = "id_authorization")
     private Long idAuthorization;
@@ -36,10 +38,11 @@ public class Opt {
     public Opt() {
     }
 
-    public Opt(String sessionId, String code, Date dateCreateOpt, Authorization aut) {
+    public Opt(String sessionId, String code, ZonedDateTime dateCreateOpt, Long idAuthorization, Authorization aut) {
         this.sessionId = sessionId;
         this.code = code;
         this.dateCreateOpt = dateCreateOpt;
+        this.idAuthorization = idAuthorization;
         this.aut = aut;
     }
 
@@ -59,11 +62,11 @@ public class Opt {
         this.code = code;
     }
 
-    public Date getDateCreateOpt() {
+    public ZonedDateTime getDateCreateOpt() {
         return dateCreateOpt;
     }
 
-    public void setDateCreateOpt(Date dateCreateOpt) {
+    public void setDateCreateOpt(ZonedDateTime dateCreateOpt) {
         this.dateCreateOpt = dateCreateOpt;
     }
 

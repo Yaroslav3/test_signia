@@ -9,13 +9,16 @@ import java.util.Random;
 @Service
 public class RandomCodeServiceImpl implements RandomCodeService {
 
+
     private String[] DATA = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+
+
 
     @Override
     public String generateRandomCode(Integer number) {
         String[] password = new String[number];
 
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < number; i++) {
             password[i] = DATA[randomNum(0, DATA.length)];
         }
 

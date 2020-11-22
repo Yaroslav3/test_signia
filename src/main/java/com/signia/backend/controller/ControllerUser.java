@@ -39,7 +39,7 @@ public class ControllerUser {
     private CheckDataServiceImpl checkDataService;
 
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity<Object> authenticateUser(@RequestBody final Authorization user) {
         Optional<Authorization> aut = authorizationService.getUserAuth(user);
 

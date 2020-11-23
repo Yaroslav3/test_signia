@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface OptService {
     Opt setOpt(Opt opt);
-    Optional<Opt>getOpt(String code);
+    Optional<Opt>getOpt(String sessionID, String code);
 }

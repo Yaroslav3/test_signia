@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="144px" height="29px" viewBox="0 0 144 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SIGN-UP" transform="translate(-329.000000, -93.000000)">
+            <g id="sign-up" transform="translate(274.000000, 76.000000)">
+                <g id="Logo" transform="translate(55.000000, 17.000000)">
+                    <text id="FAKENAME" font-family="Helvetica" font-size="18" font-weight="normal" letter-spacing="0.31764707" fill="#BCC1D8">
+                        <tspan x="44.0235298" y="23.4588344">FAKENAME</tspan>
+                    </text>
+                    <path d="M18.581091,1.35191338 L30.4163818,13.0591431 C31.9019388,14.5286259 31.8956975,16.9173021 30.4163818,18.3806111 L20.5912942,28.0971152 L18.2692595,22.0873663 C20.8181658,21.0355674 22.6120858,18.5256434 22.6120858,15.5966698 C22.6120858,11.7204585 19.4702244,8.57816836 15.5945419,8.57816836 C11.7188595,8.57816836 8.57699805,11.7204585 8.57699805,15.5966698 C8.57699805,18.5365871 10.3843485,21.0543175 12.9484267,22.0990949 L10.7042942,27.6171152 L1.36612264,18.3806111 C-0.119434317,16.9111283 -0.113193025,14.5224522 1.36612264,13.0591431 L13.2014134,1.35191338 C14.6869704,-0.117569448 17.1017754,-0.111395688 18.581091,1.35191338 Z" id="Combined-Shape" fill="#239AE8"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

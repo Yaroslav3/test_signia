@@ -21,7 +21,7 @@ public class OptServiceImpl implements OptService {
     }
 
     @Override
-    public Optional<Opt> getOpt(String code) {
-        return optRepository.findSessionId(code);
+    public Optional<Opt> getOpt(String sessionID, String code) {
+        return optRepository.findSessionId(sessionID, code);
     }
 }

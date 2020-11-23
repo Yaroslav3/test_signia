@@ -8,6 +8,6 @@ import java.util.Optional;
 
 public interface OptRepository extends JpaRepository<Opt, Long> {
 
-    @Query(value = "SELECT * FROM test_signia.opt a WHERE a.session_id=?1", nativeQuery = true)
-    Optional<Opt> findSessionId(String sessionId);
+    @Query(value = "SELECT * FROM test_signia.opt a WHERE a.session_id=?1 AND a.code=?2", nativeQuery = true)
+    Optional<Opt> findSessionId(String sessionID, String code);
 }

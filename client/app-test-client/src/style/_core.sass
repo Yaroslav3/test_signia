@@ -1,0 +1,41 @@
+@import "../style/_mixins.sass"
+@import "../style/_variables"
+
+body
+  moz-osx-font-smoothing: grayscale
+  font-smoothing: antialiased
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: none
+  overflow-x: hidden
+  background: #4A4F65
+
+button:focus
+  outline: none
+
+html, body, div, input, form, label, p, ul, li, textarea, select, button
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+  border: 0
+
+ul li
+  list-style-type: none
+
+.app-wrapper
+  width: $app-width
+  max-width: 100%
+  font-family: Ubuntu, serif
+  margin-left: auto
+  margin-right: auto
+  height: 100%
+  @include my-roboto()
+
+.text-bl
+  @include content-center-align()
+  justify-content: center
+  color: #8d8d8d
+
+@include media-state-lg()
+  .app-wrapper
+    padding-left: 20px
+    padding-right: 20px

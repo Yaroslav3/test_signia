@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {AuthService} from './service/auth.service';
 import {SystemService} from './service/system.service';
+import {HelperService} from './service/helper.service';
 
 
 @NgModule({
@@ -10,6 +11,7 @@ import {SystemService} from './service/system.service';
   ],
   providers: [
     AuthService,
-    SystemService
+    SystemService,
+    HelperService
   ]
 })export class CoreModule {}

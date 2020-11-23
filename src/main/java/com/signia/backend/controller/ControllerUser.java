@@ -47,7 +47,7 @@ public class ControllerUser {
             String message = "This email is not associated with a user account, or password is incorrect. Are you sure you've registered?";
             return new ResponseEntity<>(message, HttpStatus.BAD_REQUEST);
         } else {
-            Message message = new Message("550e8400-e29b-41d4-a716-446655440000" , randomCodeService.generateRandomCode(4));
+            Message message = new Message(randomCodeService.generateRandomCode(55) , randomCodeService.generateRandomCode(4));
             Opt opt = new Opt();
             opt.setCode(message.getCode());
             opt.setSessionId(message.getSessionId());
@@ -59,14 +59,14 @@ public class ControllerUser {
     }
 
     @PostMapping("/opt")
-    public ResponseEntity<Object> optParam(@RequestBody final Opt opt) {
-        Optional<Opt> findOpt = optService.getOpt(opt.getCode());
+    public ResponseEntity<String> optParam(@RequestBody final Opt opt) {
+        Optional<Opt> findOpt = optService.getOpt(opt.getSessionId(), opt.getCode());
         if (findOpt.isEmpty()) {
-            return new ResponseEntity<>("Error", HttpStatus.OK);
+            return new ResponseEntity<String>("Error", HttpStatus.OK);
         } else if (checkDataService.checkDate(findOpt.get().getDateCreateOpt())) {
-            return new ResponseEntity<>("Susses", HttpStatus.OK);
+            return new ResponseEntity<String>("Susses", HttpStatus.OK);
         } else {
-            return new ResponseEntity<>("Unknown error occured", HttpStatus.OK);
+            return new ResponseEntity<String>("Unknown error occured", HttpStatus.OK);
         }
     }
 }

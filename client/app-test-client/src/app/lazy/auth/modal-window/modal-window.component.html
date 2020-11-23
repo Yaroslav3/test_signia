@@ -1,0 +1,151 @@
+<section>
+  <div class="modal-window-wrapper">
+    <div class="background-svg">
+      <img src="{{deployPath}}assets/images/icons/background.svg" alt="">
+    </div>
+
+    <div class="modal-window">
+      <div class="content-window">
+        <ng-container *ngIf="isLodIn">
+          <div class="block-auth">
+            <div class="block-auth__header">
+              <img src="{{deployPath}}assets/images/icons/Logo.svg" alt="">
+            </div>
+            <div class="block-auth__route">
+              <bottom class="sign-up text-bl" routerLink="/auth/signUp">
+                <p>SIGN UP</p>
+              </bottom>
+              <bottom class="log-in text-bl" routerLink="/auth/logIn">
+                <p>LOG IN</p>
+              </bottom>
+            </div>
+            <form class="block-auth__signUp bl-padding" [formGroup]="profileSignUpForm">
+              <div class="email">
+                <div class="label-input">
+                  <span>EMAIL</span>
+                </div>
+                <input class="input-bl" (click)="onClickInput()"
+                       [ngClass]="{'border-color-error': isErrorEmailFormat || isErrorEmailRequired}"
+                       formControlName="email"
+                       placeholder="Email">
+                <div class="error" *ngIf="isErrorEmailFormat">Wrong email format</div>
+                <div class="error" *ngIf="isErrorEmailRequired">Please, enter email</div>
+              </div>
+              <div class="password">
+                <div class="label-input">
+                  <span>PASSWORD</span>
+                </div>
+                <input class="input-bl"
+                       type="password"
+                       formControlName="password1"
+                       placeholder="Be creative">
+                <div class="error" *ngIf="isErrorPasswordEmpty">Please, enter password</div>
+                <div class="error" *ngIf="isErrorPasswordNoRepeat">Repeat password error</div>
+              </div>
+              <div class="password">
+                <div class="label-input">
+                  <span>CONFIRM PASSWORD</span>
+                </div>
+                <input class="input-bl"
+                       type="password"
+                       formControlName="password2"
+                       placeholder="Be creative">
+              </div>
+              <div class="error" *ngIf="isErrorPasswordEmpty">Please, enter password</div>
+              <div class="error" *ngIf="isErrorPasswordNoRepeat">Repeat password error</div>
+              <div class="check-box-block">
+                <div class="check-box-block__checkbox">
+                  <input type="checkbox" id="scales" name="scales">
+                </div>
+                <div class="check-box-block__info">
+                  <p>Agree with all the <span>legal bullshit</span> that usually no body reads.</p>
+                </div>
+              </div>
+              <div class="btn-content" (click)="onBtnSignUp()">
+                <button class="btn-content__bl2">
+                  <p>SIGN UP</p>
+                </button>
+              </div>
+            </form>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="isSignUp">
+          <div class="block-auth">
+            <div class="block-auth__header">
+              <img src="{{deployPath}}assets/images/icons/Logo.svg" alt="">
+            </div>
+            <ng-container *ngIf="!isORT; else code">
+              <div class="block-auth__route">
+                <bottom class="sign-up text-bl" routerLink="/auth/signIn">
+                  <p>SIGN UP</p>
+                </bottom>
+                <bottom class="log-in text-bl" routerLink="/auth/logIn">
+                  <p>LOG IN</p>
+                </bottom>
+              </div>
+
+              <form class="block-auth__logIn bl-padding" [formGroup]="profileLogInForm">
+                <div class="email">
+                  <div class="info-logIn">
+                    <p>Enter the credentials yor</p>
+                    <p>used to register in the service</p>
+                  </div>
+                  <div class="label-input">
+                    <span>EMAIL</span>
+                  </div>
+                  <input class="input-bl" (click)="onClickInput()"
+                         [ngClass]="{'border-color-error': isErrorEmailFormat || isErrorEmailRequired}"
+                         formControlName="email"
+                         type="email"
+                         placeholder="Email">
+                  <div class="error" *ngIf="isErrorEmailFormat">Wrong email format</div>
+                  <div class="error" *ngIf="isErrorEmailRequired">Please, enter email</div>
+                </div>
+                <div class="password">
+                  <div class="label-input">
+                    <span>PASSWORD</span>
+                  </div>
+                  <input class="input-bl"
+                         type="password"
+                         [ngClass]="{'border-color-error': isErrorPasswordEmpty}"
+                         formControlName="password1"
+                         placeholder="Be creative">
+                  <div class="password__info">
+                    <p>Frog your password</p>
+                  </div>
+                  <div class="error error-bl" *ngIf="isErrorPasswordEmpty">Please, enter password</div>
+                </div>
+                <div class="btn-content-log-in" (click)="onBtnLogIn()">
+                  <button class="btn-content-log-in__btn-log-in">
+                    <p>LOG IN</p>
+                  </button>
+                </div>
+              </form>
+            </ng-container>
+          </div>
+        </ng-container>
+        <ng-template #code>
+          <div class="code-block bl-padding">
+            <div class="code-block__label">
+              <p>Enter code</p>
+            </div>
+            <div class="code-block__input">
+              <input class="input-bl" (click)="onClickInput()"
+                     [ngClass]="{'border-color-error': isErrorEmailFormat || isErrorEmailRequired}"
+                     type="number"
+                     (input)="onInputCode($event)"
+                     [value]="valueCode"
+                     placeholder="code">
+            </div>
+            <div class="btn-code" (click)="onEnterCode()">
+              <bottom class="btn-code__btn">
+                <p>Enter</p>
+              </bottom>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>

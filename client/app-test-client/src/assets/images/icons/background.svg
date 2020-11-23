@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="799px" height="357px" viewBox="0 0 799 357" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>bg</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SIGN-UP" transform="translate(-1.000000, -243.000000)">
+            <g id="bg" transform="translate(0.000000, 243.000000)">
+                <ellipse id="yellow_circle" fill="#FFE62F" cx="292.717349" cy="212.726179" rx="64.7173489" ry="64.7261795"></ellipse>
+                <polygon id="triangle_bg" fill="#239AE8" points="800.225326 0 800.225336 357.522727 0 357.522736"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

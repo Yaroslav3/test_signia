@@ -1,0 +1,48 @@
+
+@mixin font-family($font-family)
+  font-family: $font-family, Helvetica, sans-serif
+
+@mixin my-roboto()
+  @include font-family('Roboto-Regular')
+
+@mixin hd-desktop-media()
+  @media(max-width: 1440px)
+    @content
+
+@mixin media-state-lg()
+  @media(max-width: 1200px)
+    @content
+
+@mixin desktop-media()
+  @media(max-width: 1024px)
+    @content
+
+@mixin desktop-media-bl()
+  @media(max-width: 1000px)
+    @content
+
+
+@mixin tablet-media()
+  @media(max-width: 768px)
+    @content
+
+@mixin media-state-s()
+  @media(max-width: 600px)
+    @content
+
+@mixin media-state-s2()
+  @media(max-width: 500px)
+    @content
+
+@mixin media-state-sx()
+  @media(max-width: 450px)
+    @content
+
+@mixin mobile-media()
+  @media(max-width: 360px)
+    @content
+
+@mixin content-center-align()
+  display: flex
+  align-items: center
+  height: auto

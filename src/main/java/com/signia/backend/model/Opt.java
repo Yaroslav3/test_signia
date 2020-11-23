@@ -4,9 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.ZonedDateTime;
-import java.util.Date;
 
 @Entity
 @ToString

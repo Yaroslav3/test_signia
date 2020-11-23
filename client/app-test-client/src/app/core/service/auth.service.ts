@@ -12,9 +12,12 @@ export class AuthService {
               private _SYSTEM: SystemService) {
   }
 
-  public authUser(auth: Models.UserAuth): Observable<object>{
-    const headers = new HttpHeaders();
-    headers.set('Content-Type', 'application/json; charset=utf-8');
-    return this._HTTP.post<object>(this._SYSTEM.getApi() + apiConstants.AUTH, auth, { headers});
+  public authUser(auth: Models.UserAuth): Observable<Models.SessionOpt>{
+    return this._HTTP.post<Models.SessionOpt>(this._SYSTEM.getApi() + apiConstants.AUTH, auth);
   }
+
+  public setCodeOTP(otp: Models.SessionOpt): Observable<string> {
+    return this._HTTP.post<string>(this._SYSTEM.getApi() + apiConstants.OTP, otp);
+  }
+
 }

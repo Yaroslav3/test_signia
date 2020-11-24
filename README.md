@@ -1,13 +1,14 @@
 
-##database mySql
+#database mySql
 
-##name database test_signia
+#name database test_signia
 
-##user: yaroslav
+#user: yaroslav
 
-##password: ei7veeChu4bo
+#password: ei7veeChu4bo
 
-##In detail on configuration,  application.properties
-##dump database in folder / dump
+#In detail on configuration,  application.properties
 
-##run angular:  ng serve --port 4200
+#dump database in folder / dump
+
+#run angular:  ng serve --port 4200
